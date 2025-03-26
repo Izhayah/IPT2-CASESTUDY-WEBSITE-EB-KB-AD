@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #74EBD5, #9FACE6);
+    color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Bubble Background Fix */
+.bubble-background {
+    position: fixed; /* Fixed so it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    background: url('bubble.png') center / cover no-repeat;
+    z-index: -10; /* Push behind everything */
+    opacity: 0.5; /* Adjust transparency */
+}
+
+.header, .content, .footer {
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 2000px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers buttons */
+    gap: 100px; /* Spacing between buttons */
+    flex-wrap: wrap;
+    border-bottom: 3px solid #0f2e59;
+    border-top: 3px solid #0f2e59;
+    background-color: #ffffffa8;
+    height: 90px; /* Increased height for better proportions */
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    
+}
+
+.nav-link.active {
+    color: #FF6347;
+  }
+
+.navbar .nav-link {
+    text-decoration: none;
+    font-size: 22px; /* Bigger text */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    padding: 15px 25px; /* More padding for a button-like feel */
+    background-color: #9face6b3; /* Main button color */
+    min-width: 300px;
+    border-radius: 10px; /* More rounded corners */
+    border: 3px solid #0e0e01; /* Bold border */
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+.navbar .nav-link:hover {
+    background-color: #002f51; /* Darker on hover */
+    color: white;
+    transform: scale(1.1); /* Subtle pop effect */
+}
+
+.header, .content, .footer {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+    
+}
+
+h2 {
+    font-family:'Times New Roman', Times, serif;
+    color: #fffeff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 5rem !important ;
+    -webkit-text-stroke: 0.5px rgba(0, 36, 63, 0.985); /* Outline effect */
+    text-transform: uppercase;
+    padding-top: 3rem;
+}
+
+.artists {
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.description-hiraya{
+    font-family: 'Times New Roman', Times, serif;
+   font-size: 2.8rem;
+   font-weight: bold;
+   color: #03166b; /* Text color */
+   -webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Outline effect */
+   margin-bottom: 0.2rem;
+   text-align: center;
+   width: 100%;
+   padding-top: 2rem;
+   }
+
+.description {
+ font-family: 'Times New Roman', Times, serif;
+font-size: 2.8rem;
+font-weight: bold;
+color: #03166b; /* Text color */
+-webkit-text-stroke: 0.5px rgb(0, 0, 0); /* Outline effect */
+margin-bottom: 0.2rem;
+text-align: center;
+width: 100%;
+padding-top: 8rem;
+}
+
+.artists h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.artist-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+}
+
+.artist {
+    display: flex;
+    flex: 1 1 calc(25% - 2rem);
+    min-width: 250px;
+    max-width: 400px;
+    text-align: center;
+    margin: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.artist-name {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.artist-photo {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 4/3;
+    max-width: 450px;  /* Makes the image larger */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgb(249, 248, 248); /* Border */
+    padding: 20px; /* Creates space between border and image */
+    display: inline-block; /* Keeps it wrapped around content */
+}
+
+.artist-photo:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 3px solid #D5C8C8;
+    font-family: 'Inter', Verdana;
+    font-size: 0.9rem;
+    color: #1E2022;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 1px;
+    color: #666;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    border-radius: 50%;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    background-color: rgb(179, 255, 255);
+    border-radius: 50%;
+}
+
+.header, .content, .footer,.artist-photo {
+    position: relative; 
+    z-index: 10 
+}
+
+
+.header, .content, .footer ,.artist-photo {
+    z-index: 10; 
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 100%;
+    }
+
+    .logo {
+        max-width: 400px;
+        height: auto;
+        margin: auto;
+    }
+
+    .artists {
+        padding: 0.5rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .artist-list {
+        gap: 1rem;
+    }
+
+    .artist {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: 300px;
+    }
+
+    .artist-photo {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+
+    .social-media img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .navbar .nav-link {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .navbar {
+        gap: 3px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar .nav-link {
+        font-size: 10px;
+        padding: 1px;
+    }
+    .artists h2{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:480px) {
+    .background-shapes {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .artists h2{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+    
+              
+
+    
+
+
+
+
+
+
+
+
+
