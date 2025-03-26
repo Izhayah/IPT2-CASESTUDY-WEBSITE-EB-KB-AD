@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #74EBD5, #9FACE6);
+    color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Bubble Background Fix */
+.bubble-background {
+    position: fixed; /* Fixed so it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full screen */
+    background: url('bubble.png') center / cover no-repeat;
+    z-index: -10; /* Push behind everything */
+    opacity: 0.5; /* Adjust transparency */
+}
+
+.header, .content, .footer {
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 2000px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centers buttons */
+    gap: 100px; /* Spacing between buttons */
+    flex-wrap: wrap;
+    border-bottom: 3px solid #0f2e59;
+    border-top: 3px solid #0f2e59;
+    background-color: #ffffffa8;
+    height: 90px; /* Increased height for better proportions */
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+    
+}
+
+.nav-link.active {
+    color: #FF6347;
+  }
+
+.navbar .nav-link {
+    text-decoration: none;
+    font-size: 22px; /* Bigger text */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    padding: 15px 25px; /* More padding for a button-like feel */
+    background-color: #9face6b3; /* Main button color */
+    min-width: 300px;
+    border-radius: 10px; /* More rounded corners */
+    border: 3px solid #0e0e01; /* Bold border */
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+.navbar .nav-link:hover {
+    background-color: #002f51; /* Darker on hover */
+    color: white;
+    transform: scale(1.1); /* Subtle pop effect */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    min-height: calc(100vh - 180px);
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.schedule-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+}
+.schedule {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    flex: 1;
+}
+
+.schedule .shed-text {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-left: 0;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.schedule .text {
+    font-size: 2.3rem;
+    margin-top: 3px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: justify;
+    color: #1E2022;
+}
+
+.calendar {
+    flex: 0 1 auto; 
+    max-width: 30%; 
+    text-align: center;
+}
+
+.calendar img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-right: 30px;
+    
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.day .day-header {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.events {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 30px;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    margin: 0 15px; /* Add some margin between events */
+}
+
+.event img {
+    width: 100%;
+    max-width: 450px;  /* Makes the image larger */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgb(249, 248, 248); /* Border */
+    padding: 20px; /* Creates space between border and image */
+    display: inline-block; /* Keeps it wrapped around content */
+}
+
+.day .event-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.band-photo{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.band-photo:hover {
+    transform: scale(1.05);
+}
+
+.day .event-time {
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    background-color: white;
+    border-top: 3px solid #D5C8C8;
+    font-family: 'Inter', Verdana;
+    font-size: 0.9rem;
+    color: #1E2022;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin-top: 1px;
+    color: #666;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+}
+
+.social-media img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.main {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .logo {
+        max-width: 500px;
+        height: auto;
+        margin-left: 50px;
+    }
+
+    .schedule {
+        max-width: 100%; /* Full width for smaller screens */
+        text-align: center; /* Centers the text */
+    }
+
+    .schedule-container {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .calendar{
+        max-width: 100%;
+    }
+
+    .calendar img {
+        max-width: 200px;
+        
+    }
+
+    .events {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event {
+        margin-bottom: 20px;
+    }
+
+    .shape {
+        width: 60px; /* Adjust size for smaller screens */
+        height: 60px;
+    }
+
+    .day .day-header {
+        font-size: 2.2rem;
+    }
+
+    .schedule .shed-text {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+        margin-top: 15px;
+    }
+
+    .schedule .text {
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .navbar .nav-link {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .navbar {
+        gap: 3px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-link {
+        font-size: 10px;
+        padding: 1px;
+    }
+
+    .content {
+        align-content: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 500px;
+        height: auto;
+        margin-left: 50px;
+    }
+
+    .schedule {
+        max-width: 100%; /* Full width */
+        text-align: center; /* Centers text for mobile */
+    }
+
+    .schedule .shed-header {
+        font-size: 1.5rem;
+    }
+
+    .schedule-container {
+        flex-direction: column; /* Ensure stacking on very small screens */
+        align-items: center;
+    }
+
+    .calendar {
+        max-width: 100%; /* Full-width for smaller screens */
+    }
+
+    .calendar img {
+        max-width: 120px; /* Shrinks further for mobile screens */
+        
+    }
+
+    .footer {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .social-media img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .shape {
+        border-width: 1px; 
+        width: 50px; 
+        height: 50px;  
+    }
+
+    .day .day-header {
+        font-size: 1.8rem;
+    }
+
+    .schedule .shed-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2px;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .schedule .text {
+        font-size: 0.9rem;
+        margin-top: 2px;
+    }
+}
+
+
+
