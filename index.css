@@ -207,7 +207,7 @@ body {
 }
 
 .day .event-name {
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -222,8 +222,9 @@ body {
 }
 
 .day .event-time {
-    font-size: 1.3rem;
+    font-size: 2.3rem;
     margin-top: 5px;
+    font-weight: bold;
 }
 footer {
     display: flex;
