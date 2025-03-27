@@ -196,6 +196,15 @@ padding-top: 8rem;
     transform: scale(1.05);
 }
 
+.bandana, .levitate {
+    background-color: rgba(159, 56, 249, 0.1); /* Transparent pink */
+}
+
+.hiraya,.uno{
+    background-color: rgba(130, 8, 164, 0.338); /* Transparent pink */
+    border-radius: 50px; /* More rounded corners */
+}
+
 footer {
     display: flex;
     flex-direction: column;
