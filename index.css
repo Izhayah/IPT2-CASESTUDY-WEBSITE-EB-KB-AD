@@ -171,13 +171,15 @@ body {
     margin-bottom: 40px;
     margin-top: 50px;
     width: 100%;
+    
 }
 
 .day .day-header {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
+    color: rgba(14, 1, 68, 0.766);
 }
 
 .events {
