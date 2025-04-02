@@ -144,7 +144,7 @@ body {
 
 
 .schedule .text {
-    font-size: 2.4rem;
+    font-size:3.4rem;
     font-style: italic;
     margin-top: 3px;
     margin-bottom: 0;
@@ -215,7 +215,7 @@ body {
 }
 
 .day .event-name {
-    font-size: 3.5rem;
+    font-size:4.5rem;
     font-weight: bold;
     margin-top: 30px;
 }
@@ -230,7 +230,7 @@ body {
 }
 
 .day .event-time {
-    font-size: 2.3rem;
+    font-size: 4.3rem;
     margin-top: 5px;
     font-weight: bold;
 }
