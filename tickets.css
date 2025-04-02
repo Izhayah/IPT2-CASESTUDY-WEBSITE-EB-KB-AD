@@ -261,17 +261,7 @@ footer p {
         z-index: 10 
     }
     
-    height: 100vh;
-}
-
-.header, .content, .footer {
-    position: relative; 
-    z-index: 1; /* Ensure these elements are above the background shapes */
-}
-
-/* Ensure content has a higher z-index */
-.header, .content, .footer {
-    z-index: 1; /* These elements will stay in front of the shapes */
+    
 }
 
 
